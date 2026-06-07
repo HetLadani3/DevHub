@@ -1,0 +1,9 @@
+node_modules/
+.env
+__pycache__/
+venv/
+.venv/
+*.sqlite3
+*.db
+.DS_Store
+git_commit_script.ps1
