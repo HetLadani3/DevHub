@@ -7,3 +7,5 @@ venv/
 *.db
 .DS_Store
 git_commit_script.ps1
+
+.env
