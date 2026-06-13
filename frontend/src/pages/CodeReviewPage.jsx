@@ -27,7 +27,7 @@ export default function CodeReviewPage() {
 
   const fetchHistory = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/review/history", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL || "https://devhub-backend.onrender.com"}/api/review/history`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setHistory(response.data);
@@ -42,7 +42,7 @@ export default function CodeReviewPage() {
     try {
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
       const response = await axios.post(
-        "http://localhost:5000/api/review/get-review",
+        `${import.meta.env.VITE_API_URL || "https://devhub-backend.onrender.com"}/api/review/get-review`,
         { code },
         { headers }
       );

@@ -18,7 +18,7 @@ export default function AuthPage() {
 
     const endpoint = isLogin ? "/api/auth/login" : "/api/auth/register";
     try {
-      const response = await axios.post(`http://localhost:5000${endpoint}`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL || "https://devhub-backend.onrender.com"}${endpoint}`, {
         username,
         password,
       });
