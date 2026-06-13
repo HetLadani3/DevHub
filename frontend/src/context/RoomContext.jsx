@@ -56,7 +56,7 @@ function greet() {
     setIsMinimized(false);
     setUnreadMessages(0);
 
-    const socket = io(import.meta.env.VITE_API_URL || "https://devhub-backend.onrender.com");
+    const socket = io(import.meta.env.VITE_API_URL || "https://devhub-hxqe.onrender.com");
     socketRef.current = socket;
 
     // Attach listeners before emitting join request

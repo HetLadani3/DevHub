@@ -26,7 +26,7 @@ export default function CodeRoomDashboard() {
     setError("");
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL || "https://devhub-backend.onrender.com"}/api/rooms`,
+        `${import.meta.env.VITE_API_URL || "https://devhub-hxqe.onrender.com"}/api/rooms`,
         { name: newRoomName },
         { headers: { Authorization: `Bearer ${token}` } }
       );
